@@ -8,7 +8,7 @@ conta = conta.upper()
 print('-------------------------')
 
 if conta == 'R':
-    gasto = (consumo * 0.05) + 5
+    gasto = ((consumo - 100) * 0.05) + 5
     print(f'=> A sua conta de água para {consumo} metros cúbicos será de R${gasto:.2f}.')
 elif conta == 'C':
     if consumo <= 80:
