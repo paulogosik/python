@@ -15,14 +15,14 @@ elif conta == 'C':
         gasto = 500
         print(f'=> A sua conta de água para {consumo} metros cúbicos será de R${gasto:.2f}.')
     else:
-        gasto = (consumo * 0.25) + 500
+        gasto = ((consumo - 100) * 0.25) + 500
         print(f'=> A sua conta de água para {consumo} metros cúbicos será de R${gasto:.2f}.')
 elif conta == 'I':
     if consumo <= 100:
         gasto = 800
         print(f'=> A sua conta de água para {consumo} metros cúbicos será de R${gasto:.2f}.')
     else: 
-        gasto = (consumo * 0.04) + 800
+        gasto = ((consumo - 100) * 0.04) + 800
         print(f'=> A sua conta de água para {consumo} metros cúbicos será de R${gasto:.2f}.')
 else:
     print('=> OPÇÃO INDISPONÍVEL')
