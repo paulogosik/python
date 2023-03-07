@@ -30,39 +30,39 @@ optionU = items[option]
 # PROCESSAMENTO DO PROGRAMA
 if optionC == optionU: # CASO HAJA EMPATE
       print(f'<! TIE !>\n'
-            f'User: {optionU}\n'
-            f'Computer: {optionC}')
+            f'=> User: {optionU}\n'
+            f'=> Computer: {optionC}')
 elif optionU == 'Rock': # USUÁRIO ESCOLHEU PEDRA
       if optionC == 'Paper':
             print(f'<! COMPUTER WINS !>\n'
-                  f'User: {optionU}\n'
-                  f'Computer: {optionC}')
+                  f'=> User: {optionU}\n'
+                  f'=> Computer: {optionC}')
       elif optionC == 'Scissors':
             print(f'<! USER WINS !>\n'
-                  f'User: {optionU}\n'
-                  f'Computer: {optionC}')
+                  f'=> User: {optionU}\n'
+                  f'=> Computer: {optionC}')
       else:
             print('<! INVALID PLAY !>')
 elif optionU == 'Paper': # USUÁRIO ESCOLHEU PAPEL
       if optionC == 'Rock':
             print(f'<! USER WINS !>\n'
-                  f'User: {optionU}\n'
-                  f'Computer: {optionC}')
+                  f'=> User: {optionU}\n'
+                  f'=> Computer: {optionC}')
       elif optionC == 'Scissors':
             print(f'<! COMPUTER WINS !>\n'
-                  f'User: {optionU}\n'
-                  f'Computer: {optionC}')
+                  f'=> User: {optionU}\n'
+                  f'=> Computer: {optionC}')
       else:
             print('<! INVALID PLAY !>')
 elif optionU == 'Scissors': # USUÁRIO JOGOU TESOURA
       if optionC == 'Rock':
             print(f'<! COMPUTER WINS !>\n'
-                  f'User: {optionU}\n'
-                  f'Computer: {optionC}')
+                  f'=> User: {optionU}\n'
+                  f'=> Computer: {optionC}')
       elif optionC == 'Paper':
             print(f'<! USER WINS !>\n'
-                  f'User: {optionU}\n'
-                  f'Computer: {optionC}')
+                  f'=> User: {optionU}\n'
+                  f'=> Computer: {optionC}')
       else:
             print('<! INVALID PLAY !>')
 else:
