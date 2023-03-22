@@ -3,7 +3,7 @@ contB = 0
 contT = 0
 contR = 0
 
-while i < 15:
+while i < 50:
     i += 1
     print(f"=> Qual o tipo do vinho {i}?\n"
           f"    [B] - Branco\n"
@@ -23,9 +23,9 @@ while i < 15:
     
     print("---------------------------")
 
-porcentB = (contB * 100) / 15
-porcentT = (contT * 100) / 15
-porcentR = (contR * 100) / 15
+porcentB = (contB * 100) / 50
+porcentT = (contT * 100) / 50
+porcentR = (contR * 100) / 50
 
 print(f"=> Percentual de vinho branco: %{porcentB:.2f}")
 print(f"=> Percentual de vinho tinto: %{porcentT:.2f}")

@@ -1,7 +1,7 @@
 i = 0
 homensBR = 0
 idosos = 0
-idadeTotal= 0
+idadeTotal = 0
 
 while i < 6:
     i += 1
