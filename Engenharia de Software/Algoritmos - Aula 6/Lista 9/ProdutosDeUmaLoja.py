@@ -2,7 +2,7 @@ i = 0
 lucroTotal = 0
 quantTotal = 0
 
-while i < 5:
+while i < 50:
     estoque = int(input("=> Qual a quantidade de produtos em estoque? "))
     precoC = float(input("=> Qual o preço de custo? "))
     precoV = float(input("=> Qual o preço de venda? "))
