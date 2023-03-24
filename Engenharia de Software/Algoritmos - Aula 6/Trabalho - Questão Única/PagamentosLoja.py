@@ -4,7 +4,7 @@ compraTotal = 0
 valorExatoTotal = 0
 trocoTotal = 0
 
-while i < 8:
+while i < 80:
     i += 1
 
     # INPUT DE VALORES
@@ -28,7 +28,7 @@ while i < 8:
         print(f"=> Valor superior! Troco de R${troco:.2f}")
 
 # CALCULOS DE VALORES FORA DO WHILE, ALGO TOTAL
-mediaDeCompra = compraTotal / 8
+mediaDeCompra = compraTotal / 80
 
 # FORA DO WHILE, PRINTS A SEREM EXECUTADOS APENAS UMA VEZ (AO FINAL)
 print("----------------------------")
