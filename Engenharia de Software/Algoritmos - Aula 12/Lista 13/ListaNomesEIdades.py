@@ -3,7 +3,7 @@ idades = []
 nomesAcimaMedia = []
 totalIdades = 0
 
-while len(nomes) < 5:
+while len(nomes) < 10:
     nome = input(f"=> Informe um nome ({len(nomes) + 1}): ")
     idade = int(input(f"=> Informe uma idade ({len(idades) + 1}): "))
     print("--------------------------")
