@@ -58,8 +58,3 @@ while opc != 6:
         posicao = int(input("=> Informe uma posição: "))
         del(numeros[posicao])
         print("--------------------------")
-        
-    else:
-        print("--------------------------")
-        print(f"=> Opção inválida!")
-        print("--------------------------")
