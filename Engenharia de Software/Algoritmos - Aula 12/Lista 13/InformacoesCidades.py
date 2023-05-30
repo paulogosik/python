@@ -3,7 +3,7 @@ habitantes = []
 superficies = []
 i = 0
 
-while i < 3:
+while i < 10:
     nome = input(f"=> {i + 1} - Informe o nome da cidade: ")
     populacao = int(input(f"=> {i + 1} - Informe a quantidade de habitantes da cidade: "))
     superficie = float(input(f"=> {i + 1} - Informe a superfície da cidade (em metros quadrados): "))
