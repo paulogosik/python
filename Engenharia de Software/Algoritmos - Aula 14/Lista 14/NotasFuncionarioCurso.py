@@ -28,3 +28,14 @@ while i < len(listaFuncionarios):
         print(f"=> {listaFuncionarios[i][0]}")
     
     i += 1
+print("----------------------------")
+
+setor = input(f"=> Informe um setor da empresa: ")
+print("----------------------------")
+print(f"=> Funcionários de '{setor}' que participaram do curso: ")
+i = 0
+while i < len(listaFuncionarios):
+    if listaFuncionarios[i][1] == setor:
+        print(f"=> {listaFuncionarios[i][0]}")
+    
+    i += 1
