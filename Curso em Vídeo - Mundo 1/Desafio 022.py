@@ -1,5 +1,5 @@
 nome = str(input('Coloque o seu nome:')).strip()
 print(nome.lower())
 print(nome.upper())
-print(len(nome) - nome.count(' ')
+print(len(nome) - nome.count(' '))
 separa = nome.split()
