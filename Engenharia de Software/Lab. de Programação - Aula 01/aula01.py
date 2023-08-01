@@ -34,16 +34,16 @@
 # print(F"A: {a}")
 
 # EXEMPLO 04 ---------------------------------------------------
-# a = 30
-# print(f"=> A: {a}")
+a = 30
+print(f"=> A: {a}")
 
-# def FuncaoA():
-#     global a
-#     a = 5
-#     print(f"=> A da função: {a}")
-#     return a
+def FuncaoA():
+    global a
+    a = 5
+    print(f"=> A da função: {a}")
+    return a
 
-# a = 3
-# print(f"=> A antes de chamar a função: {a}")
-# print(FuncaoA())
-# print(f"=> A depois de chamar a função: {a}")
+a = 3
+print(f"=> A antes de chamar a função: {a}")
+print(FuncaoA())
+print(f"=> A depois de chamar a função: {a}")
