@@ -1,12 +1,12 @@
-tabela = ('Botafogo', 'Flamengo', 'Fluminense', 'Palmeiras', 'Bragantino', 'Grêmio', 'Athletico-PR', 'Cuiabá', 'São Paulo', 'Atlético-MG',
+teams = ('Botafogo', 'Flamengo', 'Fluminense', 'Palmeiras', 'Bragantino', 'Grêmio', 'Athletico-PR', 'Cuiabá', 'São Paulo', 'Atlético-MG',
           'Cruzeiro', 'Internacional', 'Fortaleza', 'Corinthians', 'Goiás', 'Bahia', 'Santos', 'Coritiba', 'Vasco', 'América-MG')
 
-print(f"=> Lista de time do Brasileirão: {tabela}")
+print(f"=> Brasileirão list of teams: {teams}")
 print(f"----------------------")
-print(f"=> Os 5 primeiros são: {tabela[0:5]}")
+print(f"=> The first 5 teams are: {teams[0:5]}")
 print(f"----------------------")
-print(f"=> Os últimos 4 são: {tabela[16:]}")
+print(f"=> The last 4 are: {teams[16:]}")
 print(f"----------------------")
-print(f"=> Times em ordem alfabética: {sorted(tabela)}")
+print(f"=> Teams in alphabetical order: {sorted(teams)}")
 print(f"----------------------")
-print(f"=> O Cuiabá está na {tabela.index('Cuiabá') + 1}ª posição.")
+print(f"=> 'Cuiabá' is in the {teams.index('Cuiabá') + 1}° position.")
