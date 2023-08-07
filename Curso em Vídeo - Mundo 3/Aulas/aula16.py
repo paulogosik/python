@@ -23,7 +23,8 @@
 #     print(c)
 
 # PARTE PRÁTICA -----------------------------------------------
-lanche = ('hamburguer', 'suco', 'pizza', 'pudim')
+# PARTE 1 -----------------------------------------------
+lanche = ('hamburguer', 'suco', 'pizza', 'pudim', 'batata frita')
 print(lanche[:7])
 
 print(f"----------------------")
@@ -33,6 +34,11 @@ for c in lanche:
 
 print(f"----------------------")
 
-for c in enumerate(lanche):
-    print(c)
-    print(f"=> {c[0]} - Eu vou comer {c[1]}")
+for pos, comida in enumerate(lanche):
+    print(f"=> {pos} - Eu vou comer {comida}")
+    
+print(f"----------------------")
+# Organizado em ordem
+print(sorted(lanche))
+
+# PARTE 2 -----------------------------------------------
