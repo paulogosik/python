@@ -1,6 +1,6 @@
-import calcula_aula02
+import calcula
 
-print(calcula_aula02.soma(6, 2))
-print(calcula_aula02.sub(6, 2))
-print(calcula_aula02.mult(6, 2))
-print(calcula_aula02.div(6, 2))
+print(calcula.soma(6, 2))
+print(calcula.sub(6, 2))
+print(calcula.mult(6, 2))
+print(calcula.div(6, 2))
