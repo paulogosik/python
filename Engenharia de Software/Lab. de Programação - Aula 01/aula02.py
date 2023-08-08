@@ -1,0 +1,13 @@
+def soma(a, b):
+    return a + b
+def sub(a, b):
+    return a - b
+def mult(a, b):
+    return a * b
+def div(a, b):
+    return a / b
+
+print(soma(6, 2))
+print(sub(6, 2))
+print(mult(6, 2))
+print(div(6, 2))
