@@ -20,21 +20,21 @@ while opc != "sair":
     opc = input("=> ").lower()
     
     print("-------------------")
-    if opc == "1":
+    if opc == "1": # OPÇÃO 01 --------------------------------------------------------------------
         # Exercício 01
         verif = VerificaPositivo1(0)
         print(verif)
         
-    elif opc == "2":
+    elif opc == "2": # OPÇÃO 02 --------------------------------------------------------------------
         # Exercício 02
         verif = VerificaPositivo2(-4)
         print(f"O valor N é {verif}")
         
-    elif opc == "3":
+    elif opc == "3":# OPÇÃO 03 --------------------------------------------------------------------
         num = int(input(f"=> Informe um valor inteiro: "))
         par_ou_impar(num)
         
-    elif opc == "4":
+    elif opc == "4": # OPÇÃO 04 --------------------------------------------------------------------
         anos = int(input(f"=> Informe quantos anos você tem: "))
         meses = int(input(f"=> Tirando os anos, quantos meses: "))
         dias = int(input("=> Tirando os meses, quantos dias: "))
@@ -42,7 +42,7 @@ while opc != "sair":
         idadeDias = IdadeEmDias(anos, meses, dias)
         print(f"=> Você tem {idadeDias} dias de idade")
     
-    elif opc == "5":
+    elif opc == "5": # OPÇÃO 05 --------------------------------------------------------------------
         n1 = int(input("=> Informe um número inteiro: "))
         n2 = int(input("=> Informe outro número inteiro: "))
         n3 = int(input("=> Informe mais um número inteiro: "))
@@ -51,11 +51,11 @@ while opc != "sair":
 
         print(f"=> A ordem crescente é: {ordem}")
         
-    elif opc == "6":
+    elif opc == "6": # OPÇÃO 06 --------------------------------------------------------------------
         segundos = int(input(f"=> Informe o tempo representado em segundos: "))
         tempo = segundos_em_horas(segundos)
         
-    elif opc == "7":
+    elif opc == "7": # OPÇÃO 07 --------------------------------------------------------------------
         tipo = input("=> Informe o tipo da matéria: ").upper()
         n1 = float(input(f"=> Informe a N1: "))
         n2 = float(input(f"=> Informe a N2: "))
