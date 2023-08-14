@@ -1,0 +1,5 @@
+meses = ("Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro")
+print(meses)
+print(len(meses))
+print(meses[11])
+print(meses[10:])
