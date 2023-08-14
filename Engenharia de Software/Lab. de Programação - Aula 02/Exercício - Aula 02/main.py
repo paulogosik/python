@@ -6,7 +6,7 @@ from funcaoNumerosCrescentes import * # type: ignore
 from funcaoSegundosEmHoras import * # type: ignore
 from funcaoTresNotas import * # type: ignore
 
-opc = ""
+opc = None
 while opc != "sair":
     print(f"=> Selecione sua opção:\n"
           "     [1] Exercício 01\n"
