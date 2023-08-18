@@ -45,7 +45,7 @@ while opc != "sair":
     elif opc == "5": # OPÇÃO 05 --------------------------------------------------------------------
         n1 = int(input("=> Informe um número inteiro: "))
         n2 = int(input("=> Informe outro número inteiro: "))
-        n3 = int(input("=> Informe mais um número inteiro: "))
+        n3 = int(input("=> Informe mais um número inteiro:"))
 
         ordem = OrdemCrescente(n1, n2, n3) # type: ignore
         print(f"=> A ordem crescente é: {ordem}")
