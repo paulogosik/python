@@ -15,8 +15,9 @@
 def ordena_tamanho(lista):
     lista_ordenada = lista[:]
 
-    for i in len(lista_ordenada):
-        print(lista_ordenada[i])
+    for nome in lista_ordenada:
+        for nomes in lista_ordenada:
+            print(f"{nomes}")
 
 
 lista = ["Maria", "João", "Chico"]
