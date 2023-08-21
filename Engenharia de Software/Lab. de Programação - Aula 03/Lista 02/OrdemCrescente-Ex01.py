@@ -15,12 +15,17 @@
 def ordena_tamanho(lista):
     lista_ordenada = lista[:]
 
-    for nome in lista_ordenada:
-        for nomes in lista_ordenada:
-            print(f"{nomes}")
+    for nome in range(len(lista_ordenada)):
+        for nomes in range(len(lista_ordenada)):
+            if len(lista_ordenada[nome]) < len(lista_ordenada[nomes]):
+                menor = lista_ordenada[nomes]
+                lista_ordenada[nomes] = lista_ordenada[nome]
+                lista_ordenada[nome] = menor
+                
+    return lista_ordenada
 
 
-lista = ["Maria", "João", "Chico"]
+lista = ["Tress", "Dois", "Um"]
 novaLista = ordena_tamanho(lista)
-# print(f"=> Lista antes da funcao: {lista}")
-# print(f"=> Lista após a funcao: {novaLista}")
+print(f"=> Lista antes da funcao: {lista}")
+print(f"=> Lista após a funcao: {novaLista}")
