@@ -1,4 +1,4 @@
-# Utilizando sort() para resolver
+# Utilizando sort() para resolver ------------------------------------------
 def ordena_tamanho(lista):
     lista_ordenada = lista[:]
 
