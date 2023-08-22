@@ -6,13 +6,15 @@ print(f"------------------")
 
 numbers = (num1, num2, num3, num4)
 
-nines = 0
-for number in numbers:
-    if number == 9:
-        nines += 1
+# JEITO ERRADO DE CONTAS OS '9' -------------------------
+# nines = 0
+# for number in numbers:
+#     if number == 9:
+#         nines += 1
         
 print(f"=> You typed the values: {numbers}")
-print(f"=> The value 9 appeared {nines} times")
+# print(f"=> The value 9 appeared {nines} times")
+print(f"=> The value 9 appeared {numbers.count(9)} times")
 if num1 != 3 and num2 != 3 and num3 != 3 and num4 != 3:
     print(f"=> The number 3 was not typed in any position")
 else:
