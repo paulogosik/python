@@ -8,16 +8,20 @@ print(f"-" * 45)
 
 for i, num in enumerate(nums):
     if i == 0:
-        lowerNum.append(i)
-        lowerNum.append(num)
-        higherNum.append(i)
-        higherNum.append(num)
-    if num < lowerNum[1]:
-        lowerNum[0] = i
-        lowerNum[1] = num
-    elif num > higherNum[1]:
-        higherNum[0] = i
-        higherNum[1] = num
+        lowerNum = num
+        higherNum = num
+    if num < lowerNum:
+        lowerNum = num
+    elif num > higherNum:
+        higherNum = num
 
-print(f"=> The lowest number was {lowerNum[1]} in the {lowerNum[0] + 1}° place")
-print(f"=> The highest number was: {higherNum[1]} in the {higherNum[0] + 1}° place")
+print(f"=> The lowest number was {lowerNum} at the position(s): ", end='')
+for i, num in enumerate(nums):
+    if num == lowerNum:
+        print(f"{i} ", end='')
+print("")
+print(f"=> The highest number was: {higherNum} at the position(s): ", end='')
+for i, num in enumerate(nums):
+    if num == higherNum:
+        print(f"{i} ", end='')
+print("")
