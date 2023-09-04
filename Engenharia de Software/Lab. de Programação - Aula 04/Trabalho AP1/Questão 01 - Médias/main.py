@@ -1,4 +1,4 @@
-import funcoes
+import funcoes # type: ignore
 lista_nomes_notas = []
 
 for i in range(3):
