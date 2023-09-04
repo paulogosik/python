@@ -126,4 +126,13 @@ texto_separado = texto.split(" ")
 print(f"=> Texto: {texto}")
 print(f"=> Texto separado: {texto_separado}")
 
+print(f"<=>" * 4)
+
+cpf = "111.222.333-44"
+lista1 = cpf.split("-")
+print(f"=> lista1: {lista1}")
+#lista2 = lista1[0].split(".")
+lista2 = [int(item) for item in lista1[0].split(".")]
+print(f"=> lista2: {lista2}")
+
 print("")
