@@ -9,8 +9,7 @@ def somar_cpf(cpf):
         lista.append(item)
     
     for item in lista:
-        somaTotal += int(item)
-    
-    print(lista)
+        for num in item:
+            somaTotal += int(num)
     
     return somaTotal
