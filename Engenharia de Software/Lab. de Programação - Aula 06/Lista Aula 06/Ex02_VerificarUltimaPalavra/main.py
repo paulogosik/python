@@ -1,3 +1,4 @@
-import funcao
+import funcao # type: ignore
 
-frase = 
+frase = input("=> Informe seu nome completo: ")
+print(funcao.eUltimaPalavra(frase))
