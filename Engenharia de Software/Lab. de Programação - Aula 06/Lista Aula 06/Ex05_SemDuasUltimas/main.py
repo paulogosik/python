@@ -1,4 +1,4 @@
-import funcao 
+import funcao # type: ignore
 
 frase = input("=> Digite sua frase: ")
 fraseIncompleta = funcao.sem_duas_ultimas(frase)
