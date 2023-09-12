@@ -1,4 +1,4 @@
-from provaG1 import *
+from provaG1 import * # type: ignore
 
 lista=[12,34,21,34,13,65,21,12,13,34,21,12,12,65,57,12]
 
