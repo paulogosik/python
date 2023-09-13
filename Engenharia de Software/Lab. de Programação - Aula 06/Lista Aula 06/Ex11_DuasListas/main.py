@@ -1,4 +1,4 @@
-import funcao
+import funcao # type: ignore
 
 frase1 = input("=> Digite a frase 1: ")
 frase2 = input("=> Digite a frase 2: ")
