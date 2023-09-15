@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="16083605-2b6e-4c39-ab6b-96950855adaa" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Curso em Vídeo - Mundo 3/Exercicios/ex84.py" afterDir="false" />
-    </list>
+    <list default="true" id="16083605-2b6e-4c39-ab6b-96950855adaa" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -93,7 +91,7 @@
       <workItem from="1694723544991" duration="171000" />
       <workItem from="1694723856966" duration="597000" />
       <workItem from="1694724563758" duration="170000" />
-      <workItem from="1694809037972" duration="1685000" />
+      <workItem from="1694809037972" duration="1795000" />
     </task>
     <servers />
   </component>
