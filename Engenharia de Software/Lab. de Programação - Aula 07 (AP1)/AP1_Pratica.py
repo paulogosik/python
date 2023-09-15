@@ -12,7 +12,7 @@ print('Quantidade de 34 na lista é:', provaG1.quantidade(lista, 34))
 print('As quantidades de 13, 65, 15 e 57 na lista são:')
 provaG1.quantidadeVarios(lista, 13, 65, 15, 57)
 
-# imprimeXValores: 0,0625R
+# imprimeXValores: 0,0625
 print('Os primeiros 10 valores da lista são:')
 provaG1.imprimePrimeirosXValores(lista, 10)
 print('Os primeiros 5 valores da lista são:')
