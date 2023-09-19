@@ -22,4 +22,4 @@ for num in matrix[1]:
 print("-" * 30)
 print(f"=> The total sum of the numbers is: {totalEvenSum}")
 print(f"=> The sum of the third column is: {thirdColumn}")
-print(f"=> The highest number of the second column is: {highestNum}")
+print(f"=> The highest number of the second line is: {highestNum}")
