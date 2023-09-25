@@ -37,3 +37,49 @@ for key in filme.keys():
 print("-" * 30)
 for item in filme.items():
     print(f"Item: {item}")
+
+# -------------------------------------
+print("-" * 30)
+eu = {"nome": "Paulo Moita",
+      "idade": 18,
+      "sexo": "M"
+      }
+print(f"=> O {eu['nome']} tem {eu['idade']} anos.")
+
+# -------------------------------------
+print("-" * 30)
+brasil = []
+estado1 = {"UF": "Rio de Janeiro",
+           "Sigla": "RJ"
+           }
+estado2 = {"UF": "São Paulo",
+           "Sigla": "SP"
+           }
+brasil.append(estado1)
+brasil.append(estado2)
+print(f"Estado 1: {estado1}\n"
+      f"Estado 2: {estado2}\n"
+      f"Brasil: {brasil}")
+
+# -------------------------------------
+print("-" * 30)
+estado = {}
+estados = []
+sigla = None
+while sigla != "XX":
+    sigla = input("Informe a sigla (\"XX\" para o código): ").upper()
+    if sigla == "XX":
+        break
+    uf = input("Infomre a UF: ").title()
+    estado["Sigla"] = sigla
+    estado["UF"] = uf
+    estados.append(estado.copy())
+    estado.clear()
+
+print("-" * 15)
+for estado in estados:
+    for key, value in estado.items():
+        print(f"\t{key}: {value}")
+        if key == "UF":
+            print("")
+print("-" * 15)
