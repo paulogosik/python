@@ -30,4 +30,3 @@ l()
 print(counter())
 print(counter(1, 2, 3, 4, 5))
 print(counter(6, 7, 8, 9))
-
