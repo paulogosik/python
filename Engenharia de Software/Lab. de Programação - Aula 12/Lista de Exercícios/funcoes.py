@@ -86,3 +86,15 @@ def contaTexto(frase):
             contaPalavras[palavra] = palavras.count(palavra)
 
     return contaPalavras
+
+
+# QUESTÃO 2 ------------------------------------------
+def traduzir_palavra(palavra, dicionario):
+    palavras_ingles = dicionario.keys()
+
+    if palavra not in palavras_ingles:
+        print("Palavra não encontrada!")
+    else:
+        for key, value in dicionario.items():
+            if key == palavra:
+                print(f"{key} -> {value}")
