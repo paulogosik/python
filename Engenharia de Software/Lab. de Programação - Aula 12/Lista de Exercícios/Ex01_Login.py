@@ -1,4 +1,4 @@
-from Ex01_funcoes import *
+from funcoes import *
 
 usuarios = dict()
 usuarios['mickey'] = {"Login": "mickey", "Nome": "Mickey Mouse", "Último acesso": "22/06/2021", "Máquina": "larc01"}

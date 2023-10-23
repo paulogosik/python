@@ -1,3 +1,4 @@
+# QUESTÃO 2 ------------------------------------------
 def inserir_usuario():
     novo_usuario = dict()
 
@@ -71,3 +72,17 @@ def alterar_dados(user):
 
 def deletar_usuario(user, usuarios):
     del usuarios[user]
+
+
+# QUESTÃO 2 ------------------------------------------
+def contaTexto(frase):
+    palavras = frase.split(" ")
+    contaPalavras = dict()
+    palavrasVerificadas = []
+
+    for palavra in palavras:
+        if palavra not in palavrasVerificadas:
+            palavrasVerificadas.append(palavra)
+            contaPalavras[palavra] = palavras.count(palavra)
+
+    return contaPalavras

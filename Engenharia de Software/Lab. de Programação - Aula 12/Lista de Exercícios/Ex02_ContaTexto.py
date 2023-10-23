@@ -1,4 +1,4 @@
-from Ex02_funcoes import *
+from funcoes import *
 
 frase = input("Informe uma frase: ")
 print("-" * 30)
