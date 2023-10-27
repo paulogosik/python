@@ -17,33 +17,54 @@ while True:
       print("-" * 30)
 
       if opc == 1:
-            login_novo_usuario, novo_usuario = inserir_usuario()
-            usuarios[login_novo_usuario] = novo_usuario
+            login = input("Informe o login: ").lower()
+            nome = input("Informe o nome: ")
+            ultimoacesso = input("Informe o último acesso: ")
+            maquina = input("Informe a máquina: ")
             print("-" * 15)
-            print(f"Usuário adicionado com sucesso!")
+            inserir_usuario(login, nome, ultimoacesso, maquina)
             print("-" * 30)
 
       elif opc == 2:
-            listar_nomes(usuarios)
+            listar_nomes()
             print("-" * 30)
 
       elif opc == 3:
-            listar_dados(usuarios)
+            login = input("Qual usuário você deseja verificar? ")
+            print("-" * 15)
+            usuario = listar_dados(login)
+            if usuario:
+                  usuario[3] = usuario[3].replace('\n', '')
+                  print(f"Login: {usuario[0]}\n"
+                        f"Nome: {usuario[1]}\n"
+                        f"Último acesso: {usuario[2]}\n"
+                        f"Máquina: {usuario[3]}")
+            else:
+                  print("Usuário não encontrado!")
             print("-" * 30)
 
       elif opc == 4:
-            ultimo_acesso(usuarios)
+            ultimoacesso = input("Informe o último acesso desejado: ")
+            usuariosUltimoAcesso = ultimo_acesso(ultimoacesso)
+            print("-" * 15)
+
+            if usuariosUltimoAcesso:
+                  print(f"Usuários com último acesso dia {ultimoacesso}:")
+                  for usuario in usuariosUltimoAcesso:
+                        print(usuario)
+            else:
+                  print("Nenhum usuário nesta data!")
+
             print("-" * 30)
 
       elif opc == 5:
             user = input("Informe o usuário que você deseja alterar informações: ")
-            dados_alterados = alterar_dados(usuarios.get(user).copy())
-            usuarios[user] = dados_alterados
+            alterar_dados(user)
             print("-" * 30)
 
       elif opc == 6:
             user = input("Informe o usuário que você deseja excluir: ")
-            deletar_usuario(user=user, usuarios=usuarios)
+            deletar_usuario(user)
             print("-" * 15)
             print("Usuário excluído com sucesso!")
             print("-" * 30)

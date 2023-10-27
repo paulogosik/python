@@ -1,42 +1,64 @@
-def inserir_usuario():
-    novo_usuario = dict()
+def inserir_usuario(login, nome, ultimoacesso, maquina):
+    user = f"{login};{nome};{ultimoacesso};{maquina}"
+    arquivo = open("usuarios.txt", "r", encoding="utf8")
+    conteudo = arquivo.readlines()
 
-    login = input("Informe o login do novo usuário: ")
-    novo_usuario["Login"] = login
-    novo_usuario["Nome"] = input("Informe o nome do novo usuário: ")
-    novo_usuario["Último acesso"] = input("Informe o último acesso: ")
-    novo_usuario["Máquina"] = input("Informe a máquina: ")
+    usersCriados = []
+    for line in conteudo:
+        valor = line.split(";")
+        usersCriados.append(valor[0])
+    arquivo.close()
 
-    return login, novo_usuario
-
-
-def listar_nomes(usuarios):
-    for user in usuarios.values():
-        for key, value in user.items():
-            if key == "Nome":
-                print(f"{key}: {value}")
-
-
-def listar_dados(usuarios):
-    user = input("Informe um usuário para listar os dados: ")
-    print("-" * 15)
-
-    usuarios_criados = usuarios.keys()
-    if user not in usuarios_criados:
-        print("Usuário não encontrado!")
+    if login in usersCriados:
+        print("Usuário já existe!")
     else:
-        user_listado = usuarios.get(user)
-        for key, value in user_listado.items():
-            print(f"{key}: {value}")
+        print("Usuário criado com sucesso!")
+        arquivo = open("usuarios.txt", "a", encoding="utf8")
+        user = f"{login};{nome};{ultimoacesso};{maquina}"
+        arquivo.write(f"\n{user}")
 
 
-def ultimo_acesso(usuarios):
-    acesso = input("Informe o último acesso que deseja procurar: ")
-    print("-" * 15)
-    print(f"Usuários com o último login dia {acesso}:")
-    for user in usuarios.values():
-        if user['Último acesso'] == acesso:
-            print(user['Login'])
+def listar_nomes():
+    arquivo = open("usuarios.txt", "r", encoding="utf8")
+    usuarios = arquivo.readlines()
+    print("Nomes dos usuários:")
+
+    for usuario in usuarios:
+        valor = usuario.split(";")
+        print(valor[1])
+
+
+def listar_dados(user):
+    arquivo = open("usuarios.txt", "r", encoding="utf8")
+    conteudo = arquivo.readlines()
+    usersCriados = []
+    for line in conteudo:
+        valor = line.split(";")
+        usersCriados.append(valor[0])
+
+    if user not in usersCriados:
+        return False
+    else:
+        for line in conteudo:
+            usuario = line.split(";")
+            if user == usuario[0]:
+                return usuario
+
+
+def ultimo_acesso(ultimoacesso):
+    arquivo = open("usuarios.txt", "r", encoding="utf8")
+    conteudo = arquivo.readlines()
+
+    usuariosUltimoAcesso = []
+    for line in conteudo:
+        valor = line.split(";")
+        if ultimoacesso == valor[2]:
+            usuariosUltimoAcesso.append(valor[0])
+
+    if len(usuariosUltimoAcesso) == 0:
+        return False
+    else:
+        return usuariosUltimoAcesso
 
 
 def alterar_dados(user):
@@ -49,25 +71,23 @@ def alterar_dados(user):
     opc = int(input(">> "))
     print("-" * 15)
 
-    for key in user.keys():
-        if opc == 1:
-            if key != "Login":
-                user[key] = input(f"Atualize o dado ({key}): ")
 
-        elif opc == 2:
-            if key == "Nome":
-                user[key] = input(f"Atualize o dado ({key}): ")
+def deletar_usuario(user):
+    arquivo = open("usuarios.txt", "r+", encoding="utf8")
+    conteudo = arquivo.readlines()
 
-        elif opc == 3:
-            if key == "Último acesso":
-                user[key] = input(f"Atualize o dado ({key}): ")
+    userTemporario = []
+    for valores in conteudo:
+        valores = valores.replace("\n", "")
+        usuario = valores.split(";")
+        if usuario[0] != user:
+            userTemporario.append(";".join(usuario))
 
-        elif opc == 4:
-            if key == "Máquina":
-                user[key] = input(f"Atualize o dado ({key}): ")
-
-    return user
-
-
-def deletar_usuario(user, usuarios):
-    del usuarios[user]
+    arquivo.truncate(0)
+    arquivo.seek(0)
+    tamanho = len(userTemporario) - 1
+    for pos, usuario in enumerate(userTemporario):
+        if pos == tamanho:
+            arquivo.writelines(f"{usuario}")
+        else:
+            arquivo.writelines(f"{usuario}\n")
