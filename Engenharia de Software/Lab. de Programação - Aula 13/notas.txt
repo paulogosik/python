@@ -1,0 +1,5 @@
+Ana,10,10
+Beto,8,7
+Carla,7,7
+Daniel,5,7
+Eva,6,8
