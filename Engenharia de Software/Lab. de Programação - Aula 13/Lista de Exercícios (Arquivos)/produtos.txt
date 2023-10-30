@@ -1,0 +1,8 @@
+Produtos,Estoque
+Arroz,Sim
+Feijão,Não
+Trigo,Sim
+Tapioca,Sim
+Detergente,Não
+Amaciante,Não
+Sabão,Sim
