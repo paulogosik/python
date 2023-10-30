@@ -10,12 +10,14 @@ def inserir_usuario(login, nome, ultimoacesso, maquina):
     arquivo.close()
 
     if login in usersCriados:
-        print("Usuário já existe!")
+        return False
     else:
-        print("Usuário criado com sucesso!")
+        arquivo = open("usuarios.txt", "r", encoding="utf8")
+        arquivo.seek(0)
         arquivo = open("usuarios.txt", "a", encoding="utf8")
         user = f"{login};{nome};{ultimoacesso};{maquina}"
         arquivo.write(f"\n{user}")
+        return login
 
 
 def listar_nomes():
@@ -61,15 +63,44 @@ def ultimo_acesso(ultimoacesso):
         return usuariosUltimoAcesso
 
 
-def alterar_dados(user):
+def alterar_dados(user, opc):
+    login_user = nome_user = acesso_user = maquina_user = None
+
+    arquivo = open("usuarios.txt", "r", encoding="utf8")
+    conteudo = arquivo.readlines()
+    usersCriados = []
+    for line in conteudo:
+        valor = line.split(";")
+        usersCriados.append(valor[0])
+    arquivo.close()
+    if user not in usersCriados:
+        return False
+
+    arquivo = open("usuarios.txt", "r", encoding="utf8")
+    conteudo = arquivo.readlines()
+    for line in conteudo:
+        usuario = line.split(";")
+        if usuario[0] == user:
+            login_user = usuario[0]
+            nome_user = usuario[1]
+            acesso_user = usuario[2]
+            maquina_user = usuario[3]
+
     print("-" * 15)
-    print("Informe o dado que você deseja alterar\n"
-          "\t[1] Todos os dados\n"
-          "\t[2] Nome\n"
-          "\t[3] Último acesso\n"
-          "\t[4] Máquina\n")
-    opc = int(input(">> "))
-    print("-" * 15)
+    if opc == 1:
+        login_user = input("Informe o login: ")
+        nome_user = input("Informe o nome: ")
+        acesso_user = input("Informe o último acesso: ")
+        maquina_user = input("Informe a máquina: ")
+    elif opc == 2:
+        nome_user = input("Informe o nome: ")
+    elif opc == 3:
+        acesso_user = input("Informe o último acesso: ")
+    elif opc == 4:
+        maquina_user = input("Informe a máquina: ")
+
+    deletar_usuario(user)
+    inserir_usuario(login_user, nome_user, acesso_user, maquina_user)
 
 
 def deletar_usuario(user):

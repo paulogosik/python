@@ -22,7 +22,11 @@ while True:
             ultimoacesso = input("Informe o último acesso: ")
             maquina = input("Informe a máquina: ")
             print("-" * 15)
-            inserir_usuario(login, nome, ultimoacesso, maquina)
+            user = inserir_usuario(login, nome, ultimoacesso, maquina)
+            if user:
+                  print(f"Usuário {user} criado com sucesso!")
+            else:
+                  print("Usuário já existe")
             print("-" * 30)
 
       elif opc == 2:
@@ -59,7 +63,14 @@ while True:
 
       elif opc == 5:
             user = input("Informe o usuário que você deseja alterar informações: ")
-            alterar_dados(user)
+            print("-" * 15)
+            print("Informe o dado que você deseja alterar\n"
+                  "\t[1] Todos os dados\n"
+                  "\t[2] Nome\n"
+                  "\t[3] Último acesso\n"
+                  "\t[4] Máquina")
+            opc = int(input(">> "))
+            alterar_dados(user, opc)
             print("-" * 30)
 
       elif opc == 6:
