@@ -1,0 +1,6 @@
+20;Paulo;5;6;7;8
+12;Thiago;5;6;7;8
+4;Guilherme;7;8;9;10
+1;Paulo Dois;6;8;6;7
+25;Gabriel;8;8;7;8
+213;João Pedro;6;6;8;8
