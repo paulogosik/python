@@ -1,5 +1,4 @@
 from funcoes import *
-import json
 
 alunos = dict()
 
