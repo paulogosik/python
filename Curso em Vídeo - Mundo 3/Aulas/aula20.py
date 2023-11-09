@@ -23,7 +23,7 @@ def dobraLista(lst):
 
 
 message("Hello, World!")
-message("i'm Paulo, ur creator")
+message("i'm ur creator")
 
 print(sum_ab(2, 3))
 print(sum_ab(5, 6))
