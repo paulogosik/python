@@ -1,18 +1,18 @@
 from time import sleep
 
-def counter(startNum, endNum, stepNum):
-    if stepNum == 0:
-        stepNum = 1
-    elif stepNum < 0:
-        stepNum *= -1
+def counter(start_num, end_num, step_num):
+    if step_num == 0:
+        step_num = 1
+    elif step_num < 0:
+        step_num *= -1
 
-    if startNum < endNum:
-        for i in range(startNum, endNum + 1, stepNum):
+    if start_num < end_num:
+        for i in range(start_num, end_num + 1, step_num):
             print(i, end=' ')
             sleep(0.3)
 
-    elif startNum > endNum:
-        for i in range(startNum, endNum - 1, stepNum * -1):
+    elif start_num > end_num:
+        for i in range(start_num, end_num - 1, step_num * -1):
             print(i, end=' ')
             sleep(0.3)
 
