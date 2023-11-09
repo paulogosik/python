@@ -26,3 +26,9 @@ def sumEven(drawn_values):
 
 drawnvalues = draw()
 sumEven(drawnvalues)
+print("-" * 30)
+drawnvalues = draw()
+sumEven(drawnvalues)
+print("-" * 30)
+drawnvalues = draw()
+sumEven(drawnvalues)
