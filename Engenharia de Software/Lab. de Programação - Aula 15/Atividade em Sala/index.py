@@ -87,12 +87,12 @@ while True:
                     "ISBN": isbn
                 }
 
-                if realizarVenda(localizacaoClientes, localizacaoLivros, cliente):
-                    print("-" * 15)
-                    print("Venda realizada com sucesso!")
-                else:
+                if not realizarVenda(localizacaoClientes, localizacaoLivros, cliente):
                     print("-" * 15)
                     print("Quantidade requisitada maior que a quantidade disponível.")
+                else:
+                    print("-" * 15)
+                    print("Venda realizada com sucesso!")
                 print("-" * 30)
             else:
                 print("Este ISBN não existe no sistema!")

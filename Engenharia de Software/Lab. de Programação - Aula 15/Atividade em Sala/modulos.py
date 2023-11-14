@@ -108,6 +108,8 @@ def realizarVenda(localizacaoClientes, localizacaoLivros, dicionario):
     for chaveLivro, livro in databaseLivros.items():
         if chaveLivro == isbn:
             quantidadeLivro = livro.get("Quantidade")
+            print(quantidadeCliente)
+            print(quantidadeLivro)
             if quantidadeLivro < quantidadeCliente:
                 return False
             else:
