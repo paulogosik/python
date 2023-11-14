@@ -28,7 +28,7 @@ while True:
                 generoLivro = input("Informe o gênero do livro: ")
                 precocompraLivro = input("Informe o preço de compra do livro: ")
                 precovendaLivro = input("Informe o preço de venda do livro: ")
-                quantidadeLivro = input("Informe a quantidade dísponivel deste livro: ")
+                quantidadeLivro = int(input("Informe a quantidade dísponivel deste livro: "))
 
                 livro[isbn] = {
                     "Titulo": tituloLivro,
@@ -52,6 +52,7 @@ while True:
             isbn = input("Informe o ISBN do livro: ")
             if verificarChave(localizacaoLivros, isbn):
                 alterarDados(localizacaoLivros, isbn)
+                print("Dado(s) atualizado(s)!")
                 print("-" * 30)
             else:
                 print("Este ISBN não existe no sistema!")
@@ -68,9 +69,34 @@ while True:
 
         elif opc == 5:
             titulo = input("Informe o titulo do livro que voce deseja pesquisar: ")
+            pesquisarLivro(localizacaoLivros, titulo)
+            print("-" * 30)
 
         elif opc == 6:
-            print(6)
+            isbn = input("Informe o ISBN do livro a ser comprado: ")
+            if verificarChave(localizacaoLivros, isbn):
+                cliente = dict()
+
+                cpfCliente = input("Informe o CPF do cliente (utilize pontos e traço. Ex.: 000.000.000-00): ")
+                nomeCliente = input("Informe o nome do cliente: ")
+                quantidadeDesejada = int(input("Informe a quantidade desejada: "))
+
+                cliente[cpfCliente] = {
+                    "Cliente": nomeCliente,
+                    "Quantidade comprada": quantidadeDesejada,
+                    "ISBN": isbn
+                }
+
+                if realizarVenda(localizacaoClientes, localizacaoLivros, cliente):
+                    print("-" * 15)
+                    print("Venda realizada com sucesso!")
+                else:
+                    print("-" * 15)
+                    print("Quantidade requisitada maior que a quantidade disponível.")
+                print("-" * 30)
+            else:
+                print("Este ISBN não existe no sistema!")
+                print("-" * 30)
 
         elif opc == 7:
             print(7)

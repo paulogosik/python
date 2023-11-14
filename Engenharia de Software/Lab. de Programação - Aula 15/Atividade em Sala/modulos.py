@@ -3,6 +3,8 @@ import json
 def carregarDados(localizacao):
     arquivo = open(localizacao, "r", encoding="utf8")
     texto = arquivo.read()
+    if len(texto) == 0:
+        return dict()
     dicionario = json.loads(texto)
     arquivo.close()
     return dicionario
@@ -10,7 +12,7 @@ def carregarDados(localizacao):
 
 def gravarDados(localizacao, dicionario):
     database = carregarDados(localizacao)
-    if len(database) != 0:
+    if database == dict():
         for key, value in dicionario.items():
             database[key] = value
 
@@ -32,6 +34,7 @@ def verificarChave(localizacao, chave):
 def alterarDados(localizacao, chave):
     print("-" * 15)
     database = carregarDados(localizacao)
+
     print("Qual dado você deseja alterar?")
     for k, dicionario in database.items():
         if k == chave:
@@ -50,7 +53,10 @@ def alterarDados(localizacao, chave):
             if k == chave:
                 for pos, dado in enumerate(dicionario.keys()):
                     if pos + 1 == opc:
-                        dicionario[dado] = input(f"{dado}: ")
+                        if dado == "Quantidade":
+                            dicionario[dado] = int(input(f"{dado}: "))
+                        else:
+                            dicionario[dado] = input(f"{dado}: ")
 
     arquivo = open(localizacao, "w", encoding="utf8")
     texto = json.dumps(database, indent=4)
@@ -71,4 +77,45 @@ def excluirItem(localizacao, chave):
 
 
 def pesquisarLivro(localizacao, titulo):
-    print(localizacao, titulo)
+    livrosComTitulos = []
+    tamanhoTitulo = len(titulo)
+    database = carregarDados(localizacao)
+    for isbn, livros in database.items():
+        for key, value in livros.items():
+            if key == "Titulo":
+                if value[0:tamanhoTitulo] == titulo:
+                    livrosComTitulos.append(isbn)
+
+    if len(livrosComTitulos) == 0:
+        print("Não foi encontrado nenhum livro com este título.")
+    else:
+        print("")
+        for isbn, livros in database.items():
+            if isbn in livrosComTitulos:
+                print(f"ISBN: {isbn}")
+                for key, value in livros.items():
+                    print(f"{key}: {value}")
+                print("")
+
+
+def realizarVenda(localizacaoClientes, localizacaoLivros, dicionario):
+    isbn = quantidadeCliente = None
+    for cliente in dicionario.values():
+        isbn = cliente.pop("ISBN")
+        quantidadeCliente = cliente.get("Quantidade comprada")
+
+    databaseLivros = carregarDados(localizacaoLivros)
+    for chaveLivro, livro in databaseLivros.items():
+        if chaveLivro == isbn:
+            quantidadeLivro = livro.get("Quantidade")
+            if quantidadeLivro < quantidadeCliente:
+                return False
+            else:
+                livro["Quantidade"] = quantidadeLivro - quantidadeCliente
+
+    arquivo = open(localizacaoLivros, "w", encoding="utf8")
+    texto = json.dumps(databaseLivros, indent=4)
+    arquivo.write(texto)
+    arquivo.close()
+
+    gravarDados(localizacaoClientes, dicionario)
