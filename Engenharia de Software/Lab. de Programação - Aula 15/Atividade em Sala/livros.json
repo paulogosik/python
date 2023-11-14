@@ -1,0 +1,18 @@
+{
+    "101": {
+        "Titulo": "Star Wars 2",
+        "Autor": "Lucas",
+        "Genero": "Ficcao Cientifica",
+        "Preco de Compra": "10",
+        "Preco de Venda": "35",
+        "Quantidade": "12"
+    },
+    "27": {
+        "Titulo": "Star Wars Original",
+        "Autor": "Lucas",
+        "Genero": "Ficcao Cientifica",
+        "Preco de Compra": "10",
+        "Preco de Venda": "35",
+        "Quantidade": "8"
+    }
+}
