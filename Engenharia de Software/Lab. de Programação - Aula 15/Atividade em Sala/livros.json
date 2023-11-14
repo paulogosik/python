@@ -5,7 +5,7 @@
         "Genero": "Ficcao Cientifica",
         "Preco de Compra": "10",
         "Preco de Venda": "35",
-        "Quantidade": "12"
+        "Quantidade": 10
     },
     "27": {
         "Titulo": "Star Wars Original",
@@ -13,6 +13,22 @@
         "Genero": "Ficcao Cientifica",
         "Preco de Compra": "10",
         "Preco de Venda": "35",
-        "Quantidade": "8"
+        "Quantidade": 3
+    },
+    "5": {
+        "Titulo": "A Casa dos Esp\u00edritos",
+        "Autor": "Isabel Allende",
+        "Genero": "Suspense",
+        "Preco de Compra": "15",
+        "Preco de Venda": "45",
+        "Quantidade": 10
+    },
+    "1": {
+        "Titulo": "Mem\u00f3rias P\u00f3stumas de Br\u00e1s Cubas",
+        "Autor": "Machado de Assis",
+        "Genero": "Poema",
+        "Preco de Compra": "25",
+        "Preco de Venda": "60",
+        "Quantidade": 18
     }
 }
