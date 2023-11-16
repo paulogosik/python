@@ -86,20 +86,15 @@ while True:
                     "Quantidade comprada": quantidadeDesejada,
                     "ISBN": isbn
                 }
-
-                if not realizarVenda(localizacaoClientes, localizacaoLivros, cliente):
-                    print("-" * 15)
-                    print("Quantidade requisitada maior que a quantidade disponível.")
-                else:
-                    print("-" * 15)
-                    print("Venda realizada com sucesso!")
+                print("-" * 15)
+                print(realizarVenda(localizacaoClientes, localizacaoLivros, cliente))
                 print("-" * 30)
             else:
                 print("Este ISBN não existe no sistema!")
                 print("-" * 30)
 
         elif opc == 7:
-            print(7)
+            relatoriaVendas(localizacaoClientes)
 
         elif opc == 0:
             break

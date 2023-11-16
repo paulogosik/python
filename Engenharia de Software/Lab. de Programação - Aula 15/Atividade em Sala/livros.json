@@ -5,7 +5,7 @@
         "Genero": "Ficcao Cientifica",
         "Preco de Compra": "10",
         "Preco de Venda": "35",
-        "Quantidade": 10
+        "Quantidade": 3
     },
     "27": {
         "Titulo": "Star Wars Original",
@@ -29,6 +29,6 @@
         "Genero": "Poema",
         "Preco de Compra": "25",
         "Preco de Venda": "60",
-        "Quantidade": 18
+        "Quantidade": 11
     }
 }

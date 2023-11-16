@@ -2,5 +2,21 @@
     "035.343.141-90": {
         "Cliente": "Paulo G M Moita",
         "Quantidade comprada": 1
+    },
+    "123.343.749-56": {
+        "Cliente": "Guilherme Thomaz",
+        "Quantidade comprada": 1
+    },
+    "548.699.325-84": {
+        "Cliente": "Gabriel Monteiro",
+        "Quantidade comprada": 1
+    },
+    "223.653.996-00": {
+        "Cliente": "Ana Luisa S Moura",
+        "Quantidade comprada": 2
+    },
+    "000.000.000-00": {
+        "Cliente": "Cliente An\u00f4nimo",
+        "Quantidade comprada": 5
     }
 }

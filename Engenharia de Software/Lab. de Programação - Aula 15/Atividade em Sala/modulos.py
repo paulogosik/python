@@ -12,9 +12,8 @@ def carregarDados(localizacao):
 
 def gravarDados(localizacao, dicionario):
     database = carregarDados(localizacao)
-    if database == dict():
-        for key, value in dicionario.items():
-            database[key] = value
+    for key, value in dicionario.items():
+        database[key] = value
 
     arquivo = open(localizacao, "w", encoding="utf8")
     texto = json.dumps(database, indent=4)
@@ -108,12 +107,10 @@ def realizarVenda(localizacaoClientes, localizacaoLivros, dicionario):
     for chaveLivro, livro in databaseLivros.items():
         if chaveLivro == isbn:
             quantidadeLivro = livro.get("Quantidade")
-            print(quantidadeCliente)
-            print(quantidadeLivro)
-            if quantidadeLivro < quantidadeCliente:
-                return False
-            else:
+            if quantidadeLivro > quantidadeCliente:
                 livro["Quantidade"] = quantidadeLivro - quantidadeCliente
+            else:
+                return "Quantidade requisitada maior que a quantidade disponível."
 
     arquivo = open(localizacaoLivros, "w", encoding="utf8")
     texto = json.dumps(databaseLivros, indent=4)
@@ -121,3 +118,13 @@ def realizarVenda(localizacaoClientes, localizacaoLivros, dicionario):
     arquivo.close()
 
     gravarDados(localizacaoClientes, dicionario)
+    return "Venda realizada com sucesso!"
+
+
+def relatoriaVendas(localizacao):
+    database = carregarDados(localizacao)
+    for key, value in database.items():
+        print(f"CPF: {key}")
+        for chave, valor in value.items():
+            print(f"{chave}: {valor}")
+        print("-" * 15)
