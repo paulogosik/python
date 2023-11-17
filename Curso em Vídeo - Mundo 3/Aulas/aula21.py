@@ -23,4 +23,29 @@ def contador(i, f, p):
     print(f"\nFim!")
 
 
+def linha(c='-', t=30):
+
+    """
+    => É uma função que retorna o print de uma linha com o tamanho informado e o caracter informado.
+    :param c: É informado o caracter que será usado para fazer a linha, o caracter '-' está como padrão.
+    :param t: É informado o tamanho da linha, o tamanho 30 está como padrão.
+    :return: Esta função não retorna nada, apenas printa a linha customizada.
+    @Created by Paulo Moita | https://github.com/paulogosik
+    """
+
+    print(f"{c}" * t)
+
+
+def somarTresNumeros(a=0, b=0, c=0):
+    soma = a + b + c
+    print(f"O resultado da soma é: {soma}")
+
+
 print(contador.__doc__)
+linha(c='*', t=120)
+print(linha.__doc__)
+linha()
+somarTresNumeros(3, 2, 5)
+linha(t=15)
+somarTresNumeros()
+linha()
