@@ -1,6 +1,6 @@
 from ex108f import *
 
-num = float(input("Type any number: "))
+num = float(input("Type the price: R$"))
 print(f"The half value of {money(num)} is: {money(half(num))}")
 print(f"The double value of {money(num)} is: {money(double(num))}")
 print(f"Increasing 10%, we have: {money(increase(num, 10))}")
