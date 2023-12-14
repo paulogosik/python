@@ -42,7 +42,7 @@ def somarTresNumeros(a=0, b=0, c=0):
 
 
 print(contador.__doc__)
-linha(c='*', t=120)
+linha('*', 120)
 print(linha.__doc__)
 linha()
 somarTresNumeros(3, 2, 5)
