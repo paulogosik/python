@@ -1,5 +1,5 @@
 {
     "python.analysis.typeCheckingMode": "off",
-    "editor.fontSize": 12,
+    "editor.fontSize": 14,
     "scm.inputFontSize": 12
 }
