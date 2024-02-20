@@ -1,0 +1,34 @@
+#Translating python to java.
+
+No python não temos que declarar uma variável com o seu tipo, esta variável é volátil.
+Já no Java, nós temos as variáveis estaticamente tipadas, exemplo:
+
+    ##Python:
+        x = int(input("Insira qualquer valor inteiro: "))
+        x = float(input("Insira qualquer valor com vírgula: "))
+
+    ##Java:
+        int num;
+        double duasCasas;
+        float numeroReal;
+        String texto;
+
+--------------------------------------------------------------
+Exemplo de métodos e funções iguais em Python e Java:
+
+    ##Java:
+        public¹ double² soma(double³ num1, double³ num2):
+            return num1 + num2
+    
+    ##Python:
+        [preencher]
+    
+    -----------------------
+
+    ##Java:
+        public void² todasOperacoes(double num1, double num2):
+            System.out.println("Soma" + soma(10, 20)
+                               +"\nSubtração:" + sub(10, 5))
+    
+    ##Python:
+        [preencher]
