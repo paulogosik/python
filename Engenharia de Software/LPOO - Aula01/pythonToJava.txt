@@ -17,18 +17,32 @@ Já no Java, nós temos as variáveis estaticamente tipadas, exemplo:
 Exemplo de métodos e funções iguais em Python e Java:
 
     ##Java:
-        public¹ double² soma(double³ num1, double³ num2):
+        public¹ double² soma(double³ num1, double³ num2){
             return num1 + num2
+        }
     
     ##Python:
-        [preencher]
+        def soma (num1, num2):
+            return num1 + num2
     
     -----------------------
 
     ##Java:
-        public void² todasOperacoes(double num1, double num2):
+        public void² todasOperacoes(double num1, double num2){
             System.out.println("Soma" + soma(10, 20)
                                +"\nSubtração:" + sub(10, 5))
+        }
     
     ##Python:
-        [preencher]
+        def todasOperacoes(num1, num2):
+            print(f"Soma: {soma(num1, num2)}"
+                  "\nSubtração: {sub(num1, num2)})
+
+Explicações:
+1 -> Usamos public ou private para dizer a privacidade da função.
+    public: pode ser usada em qualquer arquivo ou lugar
+    private: não pode ser usada em outro arquivo, é exclusiva daquele arquivo.
+2 -> Esta parte diz o que será retornado desta função.
+    "O tipo da variável": é o tipo da variável que será retornada desta função.
+    void: esta função não retorna nada, ou seja, é um método.
+3 -> Temos que colocar o tipo da variável que está indo no argumento da função.
