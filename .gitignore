@@ -1,3 +1,5 @@
+**/__pycache__
+.venv
 **.idea/workspace.xml
 .idea/workspace.xml
 python\.idea\workspace.xml
