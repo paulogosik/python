@@ -21,25 +21,47 @@ def gravarDados(localizacao, dicionario):
     arquivo.close()
 
 
-def atualiarFornecedor(localizacao, codigo, produto):
-    database = carregarDados(localizacao)
-    produtosExistentes = database[codigo].get("Produtos", False)
-    if produtosExistentes:
-        produto = f"{produtosExistentes}, {produto}"
+def atualizarDados(localizacaoAlunos, localizacaoDisciplinas, codigo, disciplina):
+    nomeDiscplina = nomeDoObjeto(localizacaoDisciplinas, disciplina)
+    nomeAluno = nomeDoObjeto(localizacaoAlunos, codigo)
+    databaseAlunos = carregarDados(localizacaoAlunos)
+    databaseDisciplinas = carregarDados(localizacaoDisciplinas)
+    
+    # Atualizando o Aluno
+    disciplinasExistentes = databaseAlunos[codigo].get("Disciplina(s)", False)
+    if disciplinasExistentes:
+        if nomeDiscplina in disciplinasExistentes.split(', '):
+            return "Aluno já está cadastrado nesta disciplina."
+        else:
+            nomeDiscplina = f"{disciplinasExistentes}, {nomeDiscplina}"
 
-    database[codigo]["Produtos"] = produto
+    databaseAlunos[codigo]["Disciplina(s)"] = nomeDiscplina
 
-    arquivo = open(localizacao, "w", encoding="utf8")
-    texto = json.dumps(database, indent=4)
+    arquivo = open(localizacaoAlunos, "w", encoding="utf8")
+    texto = json.dumps(databaseAlunos, indent=4)
     arquivo.write(texto)
     arquivo.close()
+    
+    # Atualizando a Disciplina
+    alunosExistentes = databaseDisciplinas[disciplina].get("Aluno(s)", False)
+    if alunosExistentes:
+        nomeAluno = f"{alunosExistentes}, {nomeAluno}"
+
+    databaseDisciplinas[disciplina]["Aluno(s)"] = nomeAluno
+
+    arquivo = open(localizacaoDisciplinas, "w", encoding="utf8")
+    texto = json.dumps(databaseDisciplinas, indent=4)
+    arquivo.write(texto)
+    arquivo.close()
+    
+    return "Aluno e disciplina atualizados com sucesso!"
 
 
-def nomeDoFornecedor(localizacao, chave):
+def nomeDoObjeto(localizacao, chave):
     database = carregarDados(localizacao)
     for key, value in database.items():
         if key == chave:
-            return value["Fornecedor"]
+            return value["Nome"]
 
 
 def verificarChave(localizacao, chave):
@@ -99,22 +121,22 @@ def excluirItem(localizacao, chave):
 
 
 def pesquisar(localizacao, titulo):
-    produtosComNome = []
+    disciplinasComNome = []
     tamanhoNome = len(titulo)
     database = carregarDados(localizacao)
-    for codigo, produtos in database.items():
-        for key, value in produtos.items():
-            if key == "Produto":
+    for codigo, disciplinas in database.items():
+        for key, value in disciplinas.items():
+            if key == "Nome":
                 if value[0:tamanhoNome] == titulo:
-                    produtosComNome.append(codigo)
+                    disciplinasComNome.append(codigo)
 
-    if len(produtosComNome) == 0:
+    if len(disciplinasComNome) == 0:
         print("Não foi encontrado nenhum produto com este título.")
     else:
-        for codigo, produtos in database.items():
-            if codigo in produtosComNome:
-                for key, value in produtos.items():
-                    if key == "Produto":
+        for codigo, disciplinas in database.items():
+            if codigo in disciplinasComNome:
+                for key, value in disciplinas.items():
+                    if key == "Nome":
                         print(f"{codigo} - {value}")
 
 
@@ -125,7 +147,7 @@ def relatorio(localizacao):
         for chave, valor in value.items():
             if (chave != "Descrição") and (chave != "Estoque"):
                 print(f"{chave}: {valor}")
-        print("-" * 15)
+        print("---")
 
 
 def exportarFornecedores(localizacao):

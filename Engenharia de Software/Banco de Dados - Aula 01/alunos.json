@@ -1,8 +1,10 @@
 {
     "0312": {
-        "Aluno": "Paulo Moita"
+        "Nome": "Paulo Moita",
+        "Disciplina(s)": "Introducao a Computacao, Banco de Dados"
     },
     "5236": {
-        "Aluno": "Guilherme"
+        "Nome": "Guilherme",
+        "Disciplina(s)": "Banco de Dados"
     }
 }
