@@ -47,7 +47,7 @@ class Les:
         
     def inserir_apos(self, valor1, valor2):
         # Isere valor1 após valor2, se der. E retorne True, se não for possível retorne False.
-        if self.esta_cheia():
+        if self.esta_cheia() or self.essta_vazia():
             return False
         else:
             posicao_valor2 = None
