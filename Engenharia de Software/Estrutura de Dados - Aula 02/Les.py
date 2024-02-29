@@ -57,12 +57,12 @@ class Les:
             
             if posicao_valor2 != None:
                 for i in range(self.quant, posicao_valor2 - 1, -1):
-                    print(f"{i} - {posicao_valor2}")
-                    self.vetor[i] = self.vetor[i - 1]
                     if i == posicao_valor2:
-                        print(f"{i} - {valor1}")
                         self.vetor[i + 1] = valor1
+                    else:
+                        self.vetor[i] = self.vetor[i - 1]
                 self.quant += 1
+                return True
             else: 
                 return False
 
