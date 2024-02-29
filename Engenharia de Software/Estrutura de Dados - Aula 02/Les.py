@@ -12,7 +12,7 @@ class Les:
         self.quant -= 1
     
     def esta_vazia(self):
-        return self.quanto == 0
+        return self.quant == 0
     
     def esta_cheia(self):
         return self.quant == self.tam
@@ -47,7 +47,7 @@ class Les:
         
     def inserir_apos(self, valor1, valor2):
         # Isere valor1 após valor2, se der. E retorne True, se não for possível retorne False.
-        if self.esta_cheia() or self.essta_vazia():
+        if self.esta_cheia() or self.esta_vazia():
             return False
         else:
             posicao_valor2 = None
