@@ -55,7 +55,9 @@ class Les:
                 if self.vetor[i] == valor2:
                     posicao_valor2 = i
             
-            if posicao_valor2 != None:
+            if posicao_valor2 is None:
+                return False
+            else: 
                 for i in range(self.quant, posicao_valor2 - 1, -1):
                     if i == posicao_valor2:
                         self.vetor[i + 1] = valor1
@@ -63,6 +65,4 @@ class Les:
                         self.vetor[i] = self.vetor[i - 1]
                 self.quant += 1
                 return True
-            else: 
-                return False
 

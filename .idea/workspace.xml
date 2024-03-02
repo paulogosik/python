@@ -5,6 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9df356aa-f61a-4613-9c8b-d69905860671" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Engenharia de Software/Estrutura de Dados - Aula 02/Les.py" beforeDir="false" afterPath="$PROJECT_DIR$/Engenharia de Software/Estrutura de Dados - Aula 02/Les.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -21,6 +22,9 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitToolBoxStore">
+    <option name="projectConfigVersion" value="5" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -49,7 +53,7 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "settings.sync",
+    "settings.editor.selected.configurable": "Errors",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -72,6 +76,8 @@
       <workItem from="1695119896877" duration="5533000" />
       <workItem from="1695239399555" duration="68000" />
       <workItem from="1709247228485" duration="178000" />
+      <workItem from="1709341385368" duration="70000" />
+      <workItem from="1709341481506" duration="248000" />
     </task>
     <servers />
   </component>
