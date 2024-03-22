@@ -6,7 +6,7 @@ lista = Les.Les(5)
 lista.inserir_fim('A')
 lista.inserir_fim('B')
 lista.inserir_fim('C')
-lista.inserir_fim('D')pintoooooooo
+lista.inserir_fim('D')
 # lista.remover_fim()
 # # lista.remover_fim()
 # lista.inserir_fim('C')
