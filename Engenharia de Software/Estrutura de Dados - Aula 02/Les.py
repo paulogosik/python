@@ -12,7 +12,7 @@ class Les:
         self.quant -= 1
     
     def esta_vazia(self):
-        return self.quanto == 0
+        return self.quant == 0
     
     def esta_cheia(self):
         return self.quant == self.tam
@@ -47,7 +47,7 @@ class Les:
         
     def inserir_apos(self, valor1, valor2):
         # Isere valor1 após valor2, se der. E retorne True, se não for possível retorne False.
-        if self.esta_cheia():
+        if self.esta_cheia() or self.esta_vazia():
             return False
         else:
             posicao_valor2 = None
@@ -55,7 +55,9 @@ class Les:
                 if self.vetor[i] == valor2:
                     posicao_valor2 = i
             
-            if posicao_valor2 != None:
+            if posicao_valor2 is None:
+                return False
+            else: 
                 for i in range(self.quant, posicao_valor2 - 1, -1):
                     if i == posicao_valor2:
                         self.vetor[i + 1] = valor1
@@ -63,6 +65,4 @@ class Les:
                         self.vetor[i] = self.vetor[i - 1]
                 self.quant += 1
                 return True
-            else: 
-                return False
 
