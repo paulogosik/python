@@ -1,0 +1,17 @@
+import FilaP
+
+fila = FilaP.Fila_prioridade()
+fila.inserir("A", 2)
+fila.inserir("B", 3)
+fila.show()
+fila.inserir("C", 1)
+fila.show()
+fila.remover()
+fila.show()
+fila.inserir("Z", 30)
+fila.inserir("S", 29)
+fila.show()
+fila.remover()
+fila.show()
+fila.remover()
+fila.show()
