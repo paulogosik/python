@@ -6,7 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="9df356aa-f61a-4613-9c8b-d69905860671" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Engenharia de Software/Estrutura de Dados - Aula 04/usaLdse.py" beforeDir="false" afterPath="$PROJECT_DIR$/Engenharia de Software/Estrutura de Dados - Aula 04/usaLdse.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,21 +47,21 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "Merging main",
-    "last_opened_file_path": "C:/Users/pgosi/Documents/python",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "C:/Users/Paulo/Documents/python",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "Errors",
+    "settings.editor.selected.configurable": "settings.sync",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-python-sdk-d68999036c7f-b11f5e8da5ad-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-233.14475.56" />
+        <option value="bundled-python-sdk-09665e90c3a7-b11f5e8da5ad-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-233.15026.15" />
       </set>
     </attachedChunks>
   </component>
@@ -83,6 +82,8 @@
       <workItem from="1709829545984" duration="622000" />
       <workItem from="1711053260507" duration="66000" />
       <workItem from="1711640785297" duration="798000" />
+      <workItem from="1712142890595" duration="234000" />
+      <workItem from="1712936082972" duration="13000" />
     </task>
     <servers />
   </component>
