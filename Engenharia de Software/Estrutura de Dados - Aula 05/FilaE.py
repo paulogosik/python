@@ -1,4 +1,4 @@
-class Fila_estatica:
+class fila_estatica:
     def __init__(self, tamanho):
         self.tam_maximo = tamanho
         self.vetor = [None] * tamanho
