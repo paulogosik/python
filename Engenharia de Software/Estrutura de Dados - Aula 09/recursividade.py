@@ -10,5 +10,10 @@ def fat(n):
     else:
         return n * fat(n - 1)
 
-
-print(fat(100))
+def mult(x, y):
+    if x == 0 or y == 0:
+        return 0
+    elif x == 1:
+        return y
+    else:
+        return y + mult(x-1, y)
