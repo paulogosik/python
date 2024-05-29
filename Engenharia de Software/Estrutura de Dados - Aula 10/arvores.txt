@@ -1,0 +1,19 @@
+Pré: B|A|E|C|D|F (Circular quando passa pelo lado esquerdo)
+In: A|B|C|D|E|F (Circular quando passa por baixo)
+Pós: A|D|C|F|E|B (Circular quando passa pelo lado direito)
+
+Nível | No Nível | Na árvore
+  n   |  2*(n-1) |  (2*n)-1
+
+-Árvore binária de busca
+    - Todo valor a esquerda é menor
+    - Todo valor a direita é maior
+
+- Apresente uma sequência de 8 dados diferentes que inseridos na ordem em que
+são apresentados, gere uma ABB cujos percussos pré-ordem e in-ordem sejam iguais.
+
+- Apresente uma sequência de 8 dados diferentes que inseridos na ordem em que
+são apresentados, gere uma ABB cujos percussos pós-ordem e in-ordem sejam iguais.
+
+- Apresente uma sequência de 8 dados diferentes que inseridos na ordem em que
+são apresentados, gere uma ABB cujos percussos pré-ordem e pós-ordem sejam iguais.
