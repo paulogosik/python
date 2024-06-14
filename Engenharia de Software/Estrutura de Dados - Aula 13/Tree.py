@@ -7,6 +7,10 @@ class Tree:
             self.raiz = No(valor)
         else:
             self.raiz.insere(valor)
+            
+    def altura(self):
+        if self.raiz != None:
+            return self.raiz.altura()
 
 class No:
     def __init__(self, valor):
@@ -42,3 +46,22 @@ class No:
         print(self.info)
         if self.dir != None:
             self.dir.in_ordem()
+            
+    def altura(self):
+        hesq = hdir = 0
+        if self.esq != None:
+            hesq = self.esq.altura()
+        if self.dir != None:
+            hdir = self.dir.altura()
+        return 1 + max(hesq, hdir)
+    
+    def h(self, valor):
+        if valor == self.info:
+            return self.altura()
+        elif valor < self.info:
+            if self.esq == None:
+                return False
+            else:
+                return self.esq.h(valor)
+        else:
+            print("continua")
