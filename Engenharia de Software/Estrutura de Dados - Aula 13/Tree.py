@@ -11,6 +11,12 @@ class Tree:
     def altura(self):
         if self.raiz != None:
             return self.raiz.altura()
+        
+    def busca(self, valor):
+        if self.raiz == None:
+            return False
+        else:
+            return self.raiz.busca(valor)
 
 class No:
     def __init__(self, valor):
@@ -30,14 +36,33 @@ class No:
             else:
                 self.dir.insere(valor)
                 
+    # def busca(self, valor):
+    #     if valor == self.info:
+    #         print(self.info)
+    #     elif valor < self.info:
+    #         if self.esq != None:
+    #             print(self.info)
+    #             return self.esq.busca(valor)
+    #     else:
+    #         if self.dir != None:
+    #             print(self.info)
+    #             return self.dir.busca(valor)
+            
     def busca(self, valor):
         if valor == self.info:
+            print(self.info)
             return True
         elif valor < self.info:
-            if self.esq != None:
+            if self.esq == None:
+                return False
+            else:
+                print(self.info)
                 return self.esq.busca(valor)
         else:
-            if self.dir != None:
+            if self.dir == None:
+                return False
+            else:
+                print(self.info)
                 return self.dir.busca(valor)
             
     def in_ordem(self):
