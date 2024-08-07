@@ -83,7 +83,7 @@ class No:
             
     
     def imprime_maior_filho(self, valor):
-        if self.info == valor:
+        if self.info == valor: # não tratou se o cara não tiver filho à direita mas tiver à esquerda
             print(self.maisdir())
         elif self.info < valor:
             if self.dir != None:
@@ -103,7 +103,7 @@ class No:
     def nos_com_descendente_par(self):
         
         if self.esq != None:
-            if self.esq.info%2==0:
+            if self.esq.info%2==0: # vc está imprimindo os pais que têm filhos par e não os que têm descendentes pares
                 print(self.info)
             if self.esq.esq!=None:
                 self.esq.nos_com_descendente_par()
