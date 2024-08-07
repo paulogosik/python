@@ -500,7 +500,7 @@ class No:
     def imprimirValoresPares(self):
         if self.info%2==0:
             print(self.info)
-        if self.esq!=None:
+        if self.esq!=None: 
             self.esq.imprimirValoresPares()
         if self.dir!=None:
             self.dir.imprimirValoresPares()
