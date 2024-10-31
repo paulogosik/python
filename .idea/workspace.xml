@@ -6,6 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="9df356aa-f61a-4613-9c8b-d69905860671" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Engenharia de Software/Banco de Dados - MongoDB/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/Engenharia de Software/Banco de Dados - MongoDB/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,6 +43,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Python.main.executor": "Run",
     "Python.usaFilaP.executor": "Run",
     "Python.usaLdse.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
@@ -54,7 +56,7 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "settings.sync",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -90,6 +92,9 @@
       <workItem from="1715900061002" duration="638000" />
       <workItem from="1719171837282" duration="302000" />
       <workItem from="1719172185425" duration="116000" />
+      <workItem from="1728592132072" duration="81000" />
+      <workItem from="1730402146624" duration="95000" />
+      <workItem from="1730402280327" duration="866000" />
     </task>
     <servers />
   </component>
